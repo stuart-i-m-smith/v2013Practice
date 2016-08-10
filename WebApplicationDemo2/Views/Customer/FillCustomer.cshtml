@@ -1,0 +1,31 @@
+﻿@model WebApplicationDemo2.Models.Customer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FillCustomer</title>
+</head>
+<body>
+    <div> 
+        @Html.BeginForm("DisplayCustomer", "Customer", FormMethod.Post)
+        
+        CustomerId: @Html.TextBox("Id", Model)
+        <input id="FillCustomerButton2" type="submit" value="Submit2" />
+        
+        @*<form action="DisplayCustomer" method="post">
+
+            Customer Id: <input type="text" name="CustomerId"/></br>
+            Customer Code: <input type="text" name="CustomerCode" /></br>
+            Customer Amount: <input type="text" name="CustomerAmount" /></br>
+            <input id="FillCustomerButton" type="submit" value="Submit" />
+        </form>*@
+        
+    </div>
+</body>
+</html>
